@@ -153,7 +153,7 @@ class WikipediaLayer:
             self.toolbar.addAction(action)
 
         if add_to_menu:
-            self.iface.addPluginToVectorMenu(
+            self.iface.addPluginToWebMenu(
                 self.menu,
                 action)
 
@@ -175,7 +175,7 @@ class WikipediaLayer:
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
         for action in self.actions:
-            self.iface.removePluginVectorMenu(
+            self.iface.removePluginWebMenu(
                 self.tr(u'&Wikipedia Layer'),
                 action)
             self.iface.removeToolBarIcon(action)
