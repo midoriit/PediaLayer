@@ -239,7 +239,7 @@ class PediaLayer:
             list = data["results"]["bindings"]
 
             # add layer
-            newLayer = QgsVectorLayer("Point?crs=epsg:4326", "Wikipedia", "memory")
+            newLayer = QgsVectorLayer("Point?crs=epsg:4326", "pedialayer", "memory")
             newLayer.setProviderEncoding("UTF-8")
             QgsMapLayerRegistry.instance().addMapLayer(newLayer)
             newLayer.startEditing()
