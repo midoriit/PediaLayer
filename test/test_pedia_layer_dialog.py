@@ -9,25 +9,25 @@
 """
 
 __author__ = 'info@midoriit.com'
-__date__ = '2015-09-01'
-__copyright__ = 'Copyright 2015, Midori IT Office, LLC.'
+__date__ = '2015-09-03'
+__copyright__ = 'Copyright 2015, Midori IT Office, LLC'
 
 import unittest
 
 from PyQt4.QtGui import QDialogButtonBox, QDialog
 
-from wikipedia_layer_dialog import WikipediaLayerDialog
+from pedia_layer_dialog import PediaLayerDialog
 
 from utilities import get_qgis_app
 QGIS_APP = get_qgis_app()
 
 
-class WikipediaLayerDialogTest(unittest.TestCase):
+class PediaLayerDialogTest(unittest.TestCase):
     """Test dialog works."""
 
     def setUp(self):
         """Runs before each test."""
-        self.dialog = WikipediaLayerDialog(None)
+        self.dialog = PediaLayerDialog(None)
 
     def tearDown(self):
         """Runs after each test."""
@@ -49,7 +49,7 @@ class WikipediaLayerDialogTest(unittest.TestCase):
         self.assertEqual(result, QDialog.Rejected)
 
 if __name__ == "__main__":
-    suite = unittest.makeSuite(WikipediaLayerDialogTest)
+    suite = unittest.makeSuite(PediaLayerDialogTest)
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
 

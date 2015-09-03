@@ -1,7 +1,7 @@
 Plugin Builder Results
 
-Your plugin WikipediaLayer was created in:
-    D:\GitHub\WikipediaLayer
+Your plugin PediaLayer was created in:
+    C:\Users\Takashi Koike\.qgis2\python\plugins\PediaLayer
 
 Your QGIS plugin directory is located at:
     C:/Users/Takashi Koike/.qgis2/python/plugins
@@ -17,11 +17,11 @@ What's Next:
 
   * Test the plugin by enabling it in the QGIS plugin manager
 
-  * Customize it by editing the implementation file: ``wikipedia_layer.py``
+  * Customize it by editing the implementation file: ``pedia_layer.py``
 
   * Create your own custom icon, replacing the default icon.png
 
-  * Modify your user interface by opening WikipediaLayer.ui in Qt Designer
+  * Modify your user interface by opening PediaLayer.ui in Qt Designer
 
   * You can use the Makefile to compile your Ui and resource files when
     you make changes. This requires GNU make (gmake)

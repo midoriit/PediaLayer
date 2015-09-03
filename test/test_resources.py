@@ -9,8 +9,8 @@
 """
 
 __author__ = 'info@midoriit.com'
-__date__ = '2015-09-01'
-__copyright__ = 'Copyright 2015, Midori IT Office, LLC.'
+__date__ = '2015-09-03'
+__copyright__ = 'Copyright 2015, Midori IT Office, LLC'
 
 import unittest
 
@@ -18,7 +18,7 @@ from PyQt4.QtGui import QIcon
 
 
 
-class WikipediaLayerDialogTest(unittest.TestCase):
+class PediaLayerDialogTest(unittest.TestCase):
     """Test rerources work."""
 
     def setUp(self):
@@ -31,12 +31,12 @@ class WikipediaLayerDialogTest(unittest.TestCase):
 
     def test_icon_png(self):
         """Test we can click OK."""
-        path = ':/plugins/WikipediaLayer/icon.png'
+        path = ':/plugins/PediaLayer/icon.png'
         icon = QIcon(path)
         self.assertFalse(icon.isNull())
 
 if __name__ == "__main__":
-    suite = unittest.makeSuite(WikipediaLayerResourcesTest)
+    suite = unittest.makeSuite(PediaLayerResourcesTest)
     runner = unittest.TextTestRunner(verbosity=2)
     runner.run(suite)
 

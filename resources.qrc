@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/plugins/WikipediaLayer" >
+    <qresource prefix="/plugins/PediaLayer" >
         <file>icon.png</file>
     </qresource>
 </RCC>

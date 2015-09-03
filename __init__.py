@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
 /***************************************************************************
- WikipediaLayer
+ PediaLayer
                                  A QGIS plugin
- Add a layer of Wikipedia.
+ Create a layer from DBpedia
                              -------------------
-        begin                : 2015-09-01
-        copyright            : (C) 2015 by Midori IT Office, LLC.
+        begin                : 2015-09-03
+        copyright            : (C) 2015 by Midori IT Office, LLC
         email                : info@midoriit.com
         git sha              : $Format:%H$
  ***************************************************************************/
@@ -25,11 +25,11 @@
 
 # noinspection PyPep8Naming
 def classFactory(iface):  # pylint: disable=invalid-name
-    """Load WikipediaLayer class from file WikipediaLayer.
+    """Load PediaLayer class from file PediaLayer.
 
     :param iface: A QGIS interface instance.
     :type iface: QgsInterface
     """
     #
-    from .wikipedia_layer import WikipediaLayer
-    return WikipediaLayer(iface)
+    from .pedia_layer import PediaLayer
+    return PediaLayer(iface)

@@ -7,17 +7,17 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Wikipedia Layer
+name=PediaLayer
 qgisMinimumVersion=2.0
-description=Add a layer of Wikipedia.
-version=0.2
-author=Midori IT Office, LLC.
+description=Create a layer from DBpedia
+version=0.1
+author=Midori IT Office, LLC
 email=info@midoriit.com
 
-about=Add a layer of Wikipedia.
+about=Create a layer from DBpedia.
 
-tracker=https://github.com/midoriit/WikipediaLayer/issues
-repository=https://github.com/midoriit/WikipediaLayer
+tracker=https://github.com/midoriit/PediaLayer/issues
+repository=https://github.com/midoriit/PediaLayer
 # End of mandatory metadata
 
 # Recommended items:
@@ -28,8 +28,8 @@ repository=https://github.com/midoriit/WikipediaLayer
 # Tags are comma separated with spaces allowed
 tags=
 
-homepage=
-category=Vector
+homepage=https://github.com/midoriit/PediaLayer
+category=Plugins
 icon=icon.png
 # experimental flag
 experimental=True

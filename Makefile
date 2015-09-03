@@ -1,11 +1,11 @@
 #/***************************************************************************
-# WikipediaLayer
+# PediaLayer
 #
-# Add a layer of Wikipedia.
+# Create a layer from DBpedia
 #							 -------------------
-#		begin				: 2015-09-01
+#		begin				: 2015-09-03
 #		git sha				: $Format:%H$
-#		copyright			: (C) 2015 by Midori IT Office, LLC.
+#		copyright			: (C) 2015 by Midori IT Office, LLC
 #		email				: info@midoriit.com
 # ***************************************************************************/
 #
@@ -38,15 +38,15 @@ LOCALES =
 # translation
 SOURCES = \
 	__init__.py \
-	wikipedia_layer.py wikipedia_layer_dialog.py
+	pedia_layer.py pedia_layer_dialog.py
 
-PLUGINNAME = WikipediaLayer
+PLUGINNAME = PediaLayer
 
 PY_FILES = \
 	__init__.py \
-	wikipedia_layer.py wikipedia_layer_dialog.py
+	pedia_layer.py pedia_layer_dialog.py
 
-UI_FILES = wikipedia_layer_dialog_base.ui
+UI_FILES = pedia_layer_dialog_base.ui
 
 EXTRAS = metadata.txt icon.png
 
