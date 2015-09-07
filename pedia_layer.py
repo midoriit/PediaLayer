@@ -30,6 +30,7 @@ import os.path
 
 # IMPORT MODULES
 from qgis.core import *
+from qgis.gui import *
 import json, urllib, urllib2
 from PyQt4.QtCore import *
 
@@ -190,8 +191,8 @@ class PediaLayer:
         self.dlg.comboBox.clear()
         layers = self.iface.legendInterface().layers()
         layer_list = []
-        for layer in layers :
-            if isinstance(layer, QgsVectorLayer) or isinstance(layer, QgsRasterLayer) :
+        for layer in layers:
+            if isinstance(layer, QgsVectorLayer) or isinstance(layer, QgsRasterLayer):
                 layer_list.append(layer.name())
         self.dlg.comboBox.addItems(layer_list)
 
@@ -204,10 +205,23 @@ class PediaLayer:
 
             # ADD LAYER FROM DBPEDIA
             # calculate coordinates
-            index = self.dlg.comboBox.currentIndex()
-            layer = layers[index]
-            extent = layer.extent()
-            srcCrs = layer.crs()
+            if self.dlg.radioButton_l.isChecked() == True:
+                index = self.dlg.comboBox.currentIndex()
+                if index == -1:
+                    return
+                layer = layers[index]
+                extent = layer.extent()
+                srcCrs = layer.crs()
+            elif self.dlg.radioButton_m.isChecked() == True:
+                canvas = self.iface.mapCanvas()
+                layer = self.iface.legendInterface().currentLayer()
+                if not isinstance(layer, QgsMapLayer):
+                    return
+                extent = canvas.extent()
+                srcCrs = layer.crs()
+                srcCrs = QgsCoordinateReferenceSystem(3857, QgsCoordinateReferenceSystem.EpsgCrsId)
+            else:
+                return
             destCrs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId)
             transform = QgsCoordinateTransform(srcCrs, destCrs)
             wgsExtent = transform.transform(extent)
