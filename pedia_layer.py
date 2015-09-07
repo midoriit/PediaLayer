@@ -214,11 +214,11 @@ class PediaLayer:
                 srcCrs = layer.crs()
             elif self.dlg.radioButton_m.isChecked() == True:
                 canvas = self.iface.mapCanvas()
-                layer = self.iface.legendInterface().currentLayer()
-                if not isinstance(layer, QgsMapLayer):
+                layers = self.iface.legendInterface().layers()
+                if len(layers) == 0:
                     return
                 extent = canvas.extent()
-                srcCrs = layer.crs()
+                srcCrs = canvas.mapSettings().destinationCrs()
             else:
                 return
             destCrs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId)
