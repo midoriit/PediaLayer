@@ -219,7 +219,6 @@ class PediaLayer:
                     return
                 extent = canvas.extent()
                 srcCrs = layer.crs()
-                srcCrs = QgsCoordinateReferenceSystem(3857, QgsCoordinateReferenceSystem.EpsgCrsId)
             else:
                 return
             destCrs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId)
