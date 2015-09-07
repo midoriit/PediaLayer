@@ -10,7 +10,7 @@
 name=PediaLayer
 qgisMinimumVersion=2.0
 description=Create a layer from DBpedia
-version=0.4
+version=0.5
 author=Midori IT Office, LLC
 email=info@midoriit.com
 
