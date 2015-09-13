@@ -230,7 +230,7 @@ class PediaLayer:
             yMin = wgsExtent.yMinimum()
 
             # prepare query
-            sparql = "SELECT distinct ?name, ?abstract, ?lat, ?lon, ?url\n" \
+            sparql = "SELECT distinct ?name ?abstract ?lat ?lon ?url\n" \
             + "WHERE {\n" \
             + "?s rdfs:label ?name ;\n" \
             + "dbpedia-owl:abstract ?abstract ;\n" \
