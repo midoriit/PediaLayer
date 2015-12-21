@@ -192,7 +192,8 @@ class PediaLayer:
         layers = self.iface.legendInterface().layers()
         layer_list = []
         for layer in layers:
-            if isinstance(layer, QgsVectorLayer) or isinstance(layer, QgsRasterLayer):
+            if isinstance(layer, QgsVectorLayer) or \
+               isinstance(layer, QgsRasterLayer):
                 layer_list.append(layer.name())
         self.dlg.comboBox.addItems(layer_list)
 
@@ -259,6 +260,12 @@ class PediaLayer:
             newLayer.addAttribute(QgsField("name", QVariant.String))
             newLayer.addAttribute(QgsField("url", QVariant.String))
             newLayer.addAttribute(QgsField("abstract", QVariant.String))
+
+            # label setting
+            newLayer.setCustomProperty("labeling", "pal")
+            newLayer.setCustomProperty("labeling/enabled", "true")
+            newLayer.setCustomProperty("labeling/fieldName", "name")
+            newLayer.setCustomProperty("labeling/fontSize", "10")
 
             # add features
             for item in list:
